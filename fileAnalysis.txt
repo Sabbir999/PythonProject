@@ -1,0 +1,37 @@
+Unique words in file 1: one, two, three, four, five; six seven: eight! nine ten eleven: twelve? one two three
+Unique words in file 2: one, two, three four five, six anotherseven! anothereight? nine ten eleven twelve: twelve;
+Union of the words in files 1 and 2: two, seven: one, nine three, four four, anotherseven! twelve: twelve; ten eleven: three twelve? six eight! five, five; two one anothereight? eleven
+Intersection of the words in files 1 and 2: one, two, six nine ten three
+Words in file 1 but not in file 2: seven eight
+Words in file 2 but not in file 1: anotherseven anothereight
+Words in file 1 but not in file 2 and words in file 2 but not in file 1: seven eight anotherseven anothereight
+Frequency table for file 1:
+Word                Count
+one                 2    
+two                 2    
+three               2    
+four                1    
+five                1    
+six                 1    
+seven               1    
+eight               1    
+nine                1    
+ten                 1    
+eleven              1    
+twelve              1    
+
+Frequency table for file 2:
+Word                Count
+one                 1    
+two                 1    
+three               1    
+four                1    
+five                1    
+six                 1    
+anotherseven        1    
+anothereight        1    
+nine                1    
+ten                 2    
+eleven              2    
+twelve              2    
+

@@ -1,0 +1,77 @@
+#Saifur Sabbir
+#Project_Problem 1
+
+def displayOption():
+    print("This program performs operations on fractions.")
+    print("Enter:")
+    print("1: To add fractions")
+    print("2: To subtract fractions")
+    print("3: To multiply fractions")
+    print("4: To divide fractions")
+    print("9: To exit the program")
+    
+
+def getFraction():
+    N = int(input("Enter the numerator: "))
+    while True:
+        D = int(input("Enter the denominator: "))
+        if D != 0:
+            break
+        else:
+            print("The denominator must be nonzero.")
+    return N, D
+
+def addition(a, b, c, d):
+    N = a * d + c * b
+    D = b * d
+    return N, D
+
+def subtraction(a, b, c, d):
+    N = a * d - c * b
+    D = b * d
+    return N, D
+
+def multiplication(a, b, c, d):
+    N = a * c
+    D = b * d
+    return N, D
+
+def division(a, b, c, d):
+    N = a * d
+    D = b * c
+    return N, D
+
+# Main program
+while True:
+    displayOption()
+    option = int(input())
+    
+    if option == 9:
+        break
+    
+    print("For fraction 1")
+    num1, den1 = getFraction()
+    
+    print("For fraction 2")
+    num2, den2 = getFraction()
+    
+    if option == 1:
+        numerator, denominator = addition(num1, den1, num2, den2)
+        print(f"{num1}/{den1} + {num2}/{den2} = {numerator}/{denominator}")
+    elif option == 2:
+        numerator, denominator = subtraction(num1, den1, num2, den2)
+        print(f"{num1}/{den1} - {num2}/{den2} = {numerator}/{denominator}")
+    elif option == 3:
+        numerator, denominator = multiplication(num1, den1, num2, den2)
+        print(f"{num1}/{den1} * {num2}/{den2} = {numerator}/{denominator}")
+    elif option == 4:
+        if num2 == 0 or den2 == 0:
+            print("To divide, the second fraction must be nonzero.")
+            num2, den2 = getFraction()
+            if num2 == 0 or den2 == 0:
+                print("Invalid input. Skipping division operation.")
+                continue
+        numerator, denominator = division(num1, den1, num2, den2)
+        print(f"{num1}/{den1} / {num2}/{den2} = {numerator}/{denominator}")
+    else:
+        print("Invalid input. Please try again.")
